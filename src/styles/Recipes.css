@@ -1,0 +1,256 @@
+.recipes-wrapper {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.recipes-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.recipes-header h2 {
+  font-size: 2rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.recipes-header p {
+  color: #666;
+}
+
+/* Contenedor de la botonera de filtros */
+.recipes-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* Estilo base de los botones de filtro */
+.btn-filter {
+  padding: 0.6rem 1.2rem;
+  border: 1.5px solid var(--color-oscuro);
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-oscuro);
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+.btn-filter:hover {
+  background-color: var(--color-oscuro);
+  color: var(--color-blanco);
+  transform: translateY(-1px);
+}
+
+/* Clase activa cuando el estado de React coincide */
+.btn-filter.active {
+  background-color: var(--color-principal);
+  border-color: var(--color-principal);
+  color: var(--color-blanco);
+  box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+}
+
+/* GRID DE RECETAS (Magia pura con autofit) */
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjeta individual */
+.recipe-card {
+  background-color: var(--color-blanco);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-suave);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Distintivo de tiempo (Badge) */
+.recipe-card-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--color-blanco);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+/* Contenido de la tarjeta */
+.recipe-card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+}
+
+.recipe-card-content h3 {
+  font-size: 1.25rem;
+  color: var(--color-oscuro);
+  padding-right: 3.5rem;
+}
+
+.recipe-card-content p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Contenedor de etiquetas de macronutrientes */
+.recipe-macros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px dashed #eee;
+}
+
+/* Píldoras de macros individuales */
+.macro-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.macro-badge.kcal {
+  background-color: #ededed;
+  color: var(--color-oscuro);
+}
+
+.macro-badge.prot {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.macro-badge.carbs {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.macro-badge.fat {
+  background-color: #eceff1;
+  color: #37474f;
+}
+
+/* ==========================================
+   ESTILOS PARA LA VENTANA FLOTANTE (MODAL) 
+   ========================================== */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modal-content {
+  background-color: var(--color-blanco);
+  width: 90%;
+  max-width: 600px;
+  max-height: 85vh;
+  border-radius: var(--radius-l);
+  padding: 2.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow-y: auto;
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--color-principal);
+}
+
+.modal-header h2 {
+  font-size: 1.6rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.25rem;
+}
+
+.modal-time {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.modal-section {
+  margin-top: 1.5rem;
+}
+
+.modal-section h3 {
+  font-size: 1.15rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.modal-section ul, 
+.modal-section ol {
+  padding-left: 1.2rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.modal-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Oculta la barra de scroll en Chrome, Safari y Opera */
+.modal-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta la barra de scroll en Firefox y Edge */
+.modal-content {
+  -ms-overflow-style: none;  /* IE y Edge */
+  scrollbar-width: none;  /* Firefox */
+}

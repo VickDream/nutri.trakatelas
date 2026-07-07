@@ -1,0 +1,120 @@
+/* ==========================================
+   ESTILOS BASE (ESCRITORIO)
+   ========================================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--color-blanco, #fff);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.brand-nutri {
+  color: var(--color-oscuro, #333);
+}
+
+.brand-trakatelas {
+  color: var(--color-principal, #ff5722);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+  color: var(--color-principal, #ff5722);
+}
+
+/* El botón de hamburguesa nace oculto en escritorio */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-oscuro, #333);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================
+   RESPONSIVO (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+    /* Se muestra el botón en móviles */
+  }
+
+  /* Transformamos los links en una persiana vertical */
+  .navbar-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    /* Se despliega justo abajo del navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-blanco, #fff);
+    padding: 0;
+    gap: 0;
+    max-height: 0;
+    /* Oculto por defecto */
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, box-shadow 0.3s ease;
+  }
+
+  /* Cuando el estado de React activa la clase '.active' */
+  .navbar-links.active {
+    max-height: 250px;
+    /* Altura suficiente para los 4 links */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+  }
+
+  .navbar-links a {
+    padding: 1rem 2rem;
+    width: 100%;
+    border-bottom: 1px solid #f5f5f5;
+  }
+
+  /* Animación opcional: Convierte las tres barras en una 'X' al abrir */
+  .navbar-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
+}

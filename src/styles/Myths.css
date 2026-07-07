@@ -1,0 +1,144 @@
+.myths-wrapper {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.myths-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.myths-header h2 {
+  font-size: 2rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.myths-header p {
+  color: #666;
+}
+
+/* Contenedor principal con CSS Grid responsivo */
+.myths-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+/* El empaque de la tarjeta establece el entorno 3D */
+.flip-card {
+  background-color: transparent;
+  height: 320px;
+  perspective: 1000px; /* Crucial: Da el efecto de profundidad 3D al girar */
+}
+
+/* El contenedor interno que realmente va a rotar */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Giro suave con inercia */
+  transform-style: preserve-3d; /* Mantiene las caras en el espacio 3D */
+  box-shadow: var(--shadow-suave);
+  border-radius: var(--radius-l);
+}
+
+/* ==========================================================================
+   CAMBIO AQUÍ: Activa la rotación tanto con el mouse (:hover) como con el dedo (.flipped)
+   ========================================================================== */
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilos comunes para ambas caras (Frontal y Trasera) */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Soporte Safari */
+  backface-visibility: hidden; /* Oculta la cara opuesta al girar */
+  border-radius: var(--radius-l);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #eee;
+}
+
+/* ==========================================
+   CARA FRONTAL: EL MITO
+   ========================================== */
+.flip-card-front {
+  background-color: var(--color-blanco);
+  color: var(--color-oscuro);
+}
+
+.myth-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 1.5rem 0;
+}
+
+.card-hint {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 500;
+  margin-top: auto; /* Empuja el texto al fondo de la tarjeta */
+}
+
+/* ==========================================
+   CARA TRASERA: LA REALIDAD
+   ========================================== */
+.flip-card-back {
+  background-color: #fafafa;
+  color: var(--color-oscuro);
+  transform: rotateY(180deg); /* La cara trasera nace ya volteada */
+  border-top: 5px solid #4caf50; /* Detalle verde de validación científica */
+}
+
+.reality-text {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.fact-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #2e7d32; /* Tono verde oscuro enfocado al dato verídico */
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-m);
+  width: 100%;
+}
+
+/* Badges decorativos superiores (MITO / REALIDAD) */
+.card-badge {
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  position: absolute;
+  top: 1.5rem;
+}
+
+.myth-title {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.reality-title {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* Animación de entrada general */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

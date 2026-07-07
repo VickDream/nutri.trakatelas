@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "myth": "«El pan y los carbohidratos engordan por la noche» 🥐",
+    "reality": "¡Falso! El cuerpo no tiene un reloj que convierte los carbohidratos en grasa mágicamente a las 8:00 PM. Lo que importa es el balance calórico total del día.",
+    "fact": "Dato: Puedes incluirlos en tu cena de forma moderada si entra en tus macros diarios."
+  },
+  {
+    "id": 2,
+    "myth": "«Las grasas son malas y debes eliminarlas por completo» 🥑",
+    "reality": "¡Mito peligroso! Las grasas saludables son esenciales para la producción de hormonas, absorber vitaminas y cuidar tu cerebro.",
+    "fact": "Dato: Enfócate en fuentes de calidad como aguacate, frutos secos y aceite de oliva virgen extra."
+  },
+  {
+    "id": 3,
+    "myth": "«El agua con limón en ayunas quema la grasa abdominal» 🍋",
+    "reality": "¡Ya quisiéramos! El agua con limón hidrata y aporta vitamina C, pero no tiene la propiedad metabólica de oxidar grasa por sí sola.",
+    "fact": "Dato: El único secreto real es el déficit calórico controlado."
+  }
+]

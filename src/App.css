@@ -1,0 +1,67 @@
+/* Reset básico para que todo se comporte bien */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Variables de marca de nutri.trakatelas */
+:root {
+  --color-principal: #ff5722;
+  /* Un naranja/rojo con energía, muy "trakatelas" */
+  --color-secundario: #2e7d32;
+  /* Un verde saludable para el toque de nutrición */
+  --color-oscuro: #1a1a1a;
+  /* Para textos principales y fondos oscuros */
+  --color-claro: #f5f5f5;
+  /* Fondo general de la web */
+  --color-blanco: #ffffff;
+
+  /* Sombras y bordes globales */
+  --shadow-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --radius-m: 8px;
+  --radius-l: 16px;
+}
+
+body {
+  background-color: var(--color-claro);
+  color: var(--color-oscuro);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+
+/*Stylos del Navbar*/
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.layout-footer {
+  background-color: var(--color-oscuro);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: auto;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,198 @@
+.calculator-wrapper {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.calculator-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.calculator-header h2 {
+  font-size: 2rem;
+  color: var(--color-oscuro);
+  margin-bottom: 0.5rem;
+}
+
+.calculator-header p {
+  color: #666;
+}
+
+/* Contenedor principal en dos columnas (Escritorio) */
+.calculator-container {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Formulario */
+.calculator-form {
+  flex: 1;
+  background-color: var(--color-blanco);
+  padding: 2rem;
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-suave);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-oscuro);
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.8rem 1rem;
+  border: 1.5px solid #e0e0e0;
+  border-radius: var(--radius-m);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background-color: var(--color-blanco);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-principal);
+}
+
+/* Botón interactivo */
+.btn-calculator {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: var(--radius-m);
+  margin-top: 0.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-calculator:hover {
+  background-color: #e64a19;
+  transform: translateY(-2px);
+}
+
+.btn-calculator:active {
+  transform: translateY(0);
+}
+
+/* Columna de Resultados */
+.calculator-results {
+  flex: 1;
+  min-height: 100%;
+}
+
+.results-placeholder {
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  border-radius: var(--radius-l);
+  padding: 2rem;
+  text-align: center;
+  color: #777;
+}
+
+/* Tarjeta de resultados activos */
+.results-card {
+  background-color: var(--color-blanco);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-suave);
+  text-align: center;
+  border-top: 5px solid var(--color-secundario);
+  animation: slideUp 0.4s ease-out;
+}
+
+.results-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-oscuro);
+}
+
+.calories-badge {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-secundario);
+  margin-bottom: 2rem;
+  line-height: 1;
+}
+
+.calories-badge span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #666;
+}
+
+/* Grid manual para los tres macros principales */
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.macro-item {
+  padding: 1rem;
+  border-radius: var(--radius-m);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.macro-item strong {
+  font-size: 1.25rem;
+}
+
+/* Colores personalizados por macronutriente */
+.macro-item.protein {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.macro-item.carbs {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.macro-item.fat {
+  background-color: #eceff1;
+  color: #37474f;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive: Se apila en pantallas pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .calculator-container {
+    flex-direction: column;
+  }
+  
+  .calculator-results {
+    width: 100%;
+  }
+  
+  .macros-grid {
+    grid-template-columns: 1fr;
+  }
+}

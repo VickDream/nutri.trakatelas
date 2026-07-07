@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Bowl Trakatelas de Pollo y Aguacate",
+    "category": "alta-proteina",
+    "calories": 450,
+    "protein": "35g",
+    "carbs": "25g",
+    "fat": "15g",
+    "time": "20 min",
+    "description": "Un almuerzo rápido, saciante y cargado de nutrientes para mantener la energía a tope.",
+    "ingredients": [
+      "150g de pechuga de pollo a la plancha",
+      "1/2 aguacate en cubos",
+      "1 taza de arroz integral cocido",
+      "Espinacas frescas y tomates cherry",
+      "1 cucharada de aderezo ligero de limón"
+    ],
+    "preparation": [
+      "Cocina la pechuga de pollo a la plancha sazonada al gusto y córtala en tiras.",
+      "En un bowl grande, coloca la base de arroz integral y las espinacas frescas.",
+      "Agrega de forma ordenada las tiras de pollo, los tomates cherry cortados por la mitad y el aguacate.",
+      "Baña todo con el aderezo de limón y ¡listo para disfrutar!"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Hot Cakes Fit de Avena y Plátano",
+    "category": "snacks",
+    "calories": 320,
+    "protein": "12g",
+    "carbs": "45g",
+    "fat": "6g",
+    "time": "15 min",
+    "description": "La opción perfecta para calmar el antojo de algo dulce por las mañanas sin romper la dieta.",
+    "ingredients": [
+      "1 plátano maduro",
+      "1/2 taza de avena en hojuelas o harina de avena",
+      "1 huevo entero o 2 claras",
+      "1/4 de taza de leche vegetal o descremada",
+      "1 cucharadita de canela en polvo y esencia de vainilla"
+    ],
+    "preparation": [
+      "Licúa todos los ingredientes juntos hasta obtener una mezcla homogénea y tersa.",
+      "Calienta una sartén antiadherente a fuego medio y vierte una porción de la mezcla.",
+      "Cocina hasta que comiencen a salir burbujas en la superficie, dale la vuelta y dora por el otro lado.",
+      "Sirve calientitos y acompaña opcionalmente con fruta fresca picada por encima."
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cena Ligera de Salmón con Espárragos",
+    "category": "baja-carbs",
+    "calories": 380,
+    "protein": "30g",
+    "carbs": "8g",
+    "fat": "22g",
+    "time": "25 min",
+    "description": "Una cena elegante, alta en Omega-3 y súper baja en carbohidratos para descansar ligero.",
+    "ingredients": [
+      "150g de filete de salmón fresco",
+      "1 manojo de espárragos frescos con el tallo recortado",
+      "1 cucharadita de aceite de oliva",
+      "Sal, pimienta negra molida y ajo en polvo al gusto",
+      "Rodajas de limón para decorar"
+    ],
+    "preparation": [
+      "Sazona el filete de salmón por ambos lados con sal, pimienta y ajo en polvo.",
+      "Coloca los espárragos en una bandeja o sartén junto al salmón y añade el aceite de oliva.",
+      "Cocina a fuego medio-alto durante 4-5 minutos por lado hasta que el salmón esté en su punto y los espárragos queden tiernos.",
+      "Sirve de inmediato acompañado con rodajas de limón exprimido fresco por encima."
+    ]
+  }
+]
